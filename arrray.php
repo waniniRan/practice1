@@ -9,11 +9,51 @@ print_r($color);
 
 ?>
 
-<br>
+<br><br>
 <?php
-$user= array("Alex","Peter","Ann";)
+$user= array("Alex","Peter","Ann");
+
+print $user[2];
 ?>
 
 <pre>
     <?php print_r($user); ?>
     </pre>
+
+    <?php
+    //associative arrays
+    $user_data=[
+        "Director"=> array(        "fullname" =>"Alex Okama",
+        "address"=>"Mada",
+        "email"=>"AOkama@yahoo.com",
+        "phone"=> [ 
+            "Home" =>"+2548458996",
+            "Work"=> "+254091664",
+            "Mobile"=> "+254887907",
+            ]
+        ),
+    ];
+    
+   // print $user_data["email"];
+    ?>
+    <pre>
+        <?php print_r($user_data);?>
+</pre>
+<?php
+$user_details=[
+    "Secretary"=> array( "fullname" =>"Alex Okama",
+    "address"=>"Mada",
+    "email"=>"AOkama@yahoo.com",
+    "phone"=> [ 
+        "Home" =>"+2548458996",
+        "Work"=> "+254091664",
+        "Mobile"=> "+254887907",
+        ]
+    ),
+];
+
+print $user_details["Secretary"]["email"]["phone"];
+?>
+<pre>
+    <?php print_r($user_details);?>
+</pre>
